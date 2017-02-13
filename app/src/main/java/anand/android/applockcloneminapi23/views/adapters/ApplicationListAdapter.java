@@ -20,7 +20,6 @@ import anand.android.applockcloneminapi23.R;
 import anand.android.applockcloneminapi23.utils.AppConstants;
 import anand.android.applockcloneminapi23.utils.SharedPref;
 import anand.android.applockcloneminapi23.views.adapters.modle.AppInfo;
-import anand.android.applockcloneminapi23.views.fragments.AppListFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -47,38 +46,66 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
     }
 
     private void filterApps() {
+//        boolean flag = true;
+//
+//        //Iterate through all installed apps
+//        for (int i = 0; i < installedAppList.size(); i++) {
+//            flag = true;
+//
+//            //Get all locked apps
+//            if (SharedPref.getLocked(context) != null) {
+//                for (int j = 0; j < SharedPref.getLocked(context).size(); j++) {
+//                    AppInfo installedAppInfo = installedAppList.get(i);
+//                    AppInfo lockedAppInfo = SharedPref.getLocked(context).get(j);
+//
+//                    //Check if the app has lock activated
+//                    if (installedAppInfo.getPackageName().matches(lockedAppInfo.getPackageName())) {
+//                        installedAppInfo.setLocked(true);
+//                        lockedAppList.add(installedAppInfo);
+//                        flag = false;
+//                    }
+//                }
+//            }
+//
+//            if (flag) {
+//                unlockedAppList.add(installedAppList.get(i));
+//            }
+//        }
+//
+//        if (lockStatus.matches(AppConstants.LOCKED)) {
+//            installedAppList.clear();
+//            installedAppList.addAll(lockedAppList);
+//        } else if (lockStatus.matches(AppConstants.UNLOCKED)) {
+//            installedAppList.clear();
+//            installedAppList.addAll(unlockedAppList);
+//        }
+//
+        List<AppInfo> lockedFilteredAppList = new ArrayList<AppInfo>();
+        List<AppInfo> unlockedFilteredAppList = new ArrayList<AppInfo>();
         boolean flag = true;
-
-        //Iterate through all installed apps
-        for (int i = 0; i < installedAppList.size(); i++) {
-            flag = true;
-
-            //Get all locked apps
-            if (SharedPref.getLocked(context) != null) {
-                for (int j = 0; j < SharedPref.getLocked(context).size(); j++) {
-                    AppInfo installedAppInfo = installedAppList.get(i);
-                    AppInfo lockedAppInfo = SharedPref.getLocked(context).get(j);
-
-                    //Check if the app has lock activated
-                    if (installedAppInfo.getPackageName().matches(lockedAppInfo.getPackageName())) {
-                        installedAppInfo.setLocked(true);
-                        lockedAppList.add(installedAppInfo);
-                        flag = false;
+        if (lockStatus.matches(AppConstants.LOCKED) || lockStatus.matches(AppConstants.UNLOCKED)) {
+            for (int i = 0; i < installedAppList.size(); i++) {
+                flag = true;
+                if (SharedPref.getLocked(context) != null) {
+                    for (int j = 0; j < SharedPref.getLocked(context).size(); j++) {
+                        if (installedAppList.get(i).getPackageName().matches(SharedPref
+                                .getLocked(context).get(j))) {
+                            lockedFilteredAppList.add(installedAppList.get(i));
+                            flag = false;
+                        }
                     }
                 }
+                if (flag) {
+                    unlockedFilteredAppList.add(installedAppList.get(i));
+                }
             }
-
-            if (flag) {
-                unlockedAppList.add(installedAppList.get(i));
+            if (lockStatus.matches(AppConstants.LOCKED)) {
+                installedAppList.clear();
+                installedAppList.addAll(lockedFilteredAppList);
+            } else if (lockStatus.matches(AppConstants.UNLOCKED)) {
+                installedAppList.clear();
+                installedAppList.addAll(unlockedFilteredAppList);
             }
-        }
-
-        if (lockStatus.matches(AppConstants.LOCKED)) {
-            installedAppList.clear();
-            installedAppList.addAll(lockedAppList);
-        } else if (lockStatus.matches(AppConstants.UNLOCKED)) {
-            installedAppList.clear();
-            installedAppList.addAll(unlockedAppList);
         }
 
     }
@@ -111,19 +138,12 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
                 Log.e(TAG, "is " + appInfo1.getPackageName());
                 if (isChecked) {
                     lockedAppList.add(appInfo1);
-                    SharedPref.saveLocked(context, lockedAppList);
+                    SharedPref.addLocked(context, appInfo1.getPackageName());
                 } else {
                     SharedPref.removeLocked(context, appInfo1.getPackageName());
                 }
             }
         });
-
-//        holder.cardView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                holder.switchView.performClick();
-//            }
-//        });
     }
 
     @Override
