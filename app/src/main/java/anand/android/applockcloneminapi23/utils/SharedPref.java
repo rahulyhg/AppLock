@@ -82,8 +82,7 @@ public class SharedPref {
     private static void saveLocked(Context context, List<String> lockedApp) {
         Gson gson = new Gson();
         String jsonLockedApp = gson.toJson(lockedApp);
-        getEditor(context).putString(LOCKED_APP, jsonLockedApp);
-        editor.commit();
+        getEditor(context).putString(LOCKED_APP, jsonLockedApp).commit();
     }
 
     public static void addLocked(Context context, String app) {

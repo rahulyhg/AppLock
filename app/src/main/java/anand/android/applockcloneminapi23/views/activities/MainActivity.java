@@ -1,6 +1,7 @@
 package anand.android.applockcloneminapi23.views.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -19,6 +20,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import anand.android.applockcloneminapi23.R;
@@ -142,13 +145,20 @@ public class MainActivity extends AppCompatActivity
                     app.setIcon(p.applicationInfo.loadIcon(packageManager));
 
                     //check if the application is not an application system
-//                    Intent launchIntent = app.getLaunchIntent(context);
-//                    if (launchIntent != null && (appInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 0)
-                    installedApps.add(app);
+                    Intent launchIntent = app.getLaunchIntent(context);
+                    if (launchIntent != null && (appInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 0)
+                        installedApps.add(app);
                 } catch (PackageManager.NameNotFoundException e) {
                     e.printStackTrace();
                 }
             }
+
+            Collections.sort(installedApps, new Comparator<AppInfo>() {
+                @Override
+                public int compare(AppInfo o1, AppInfo o2) {
+                    return o1.getName().compareToIgnoreCase(o2.getName());
+                }
+            });
 
             return installedApps;
         }

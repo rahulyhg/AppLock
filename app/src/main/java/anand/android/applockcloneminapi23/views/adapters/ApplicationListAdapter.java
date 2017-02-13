@@ -36,7 +36,6 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
     private ArrayList<AppInfo> installedAppList;
     private String lockStatus;
     private List<AppInfo> lockedAppList = new ArrayList<AppInfo>();
-    private List<AppInfo> unlockedAppList = new ArrayList<AppInfo>();
 
     public ApplicationListAdapter(ArrayList<AppInfo> installedAppList, Activity activity, String lockStatus) {
         this.installedAppList = installedAppList;
@@ -151,14 +150,14 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
         return installedAppList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.icon) ImageView icon;
         @BindView(R.id.applicationName) TextView applicationName;
         @BindView(R.id.switchView) Switch switchView;
         @BindView(R.id.card_view) CardView cardView;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
