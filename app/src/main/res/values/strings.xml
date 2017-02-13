@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">AppLockCloneMinAPI23</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_password">Password Change</string>
+    <string name="rate_us">Rate us</string>
+
+    <!--Text view-->
+    <string name="txt_label_pattern_once_again">Confirm pattern once again</string>
+    <string name="txt_label_confirm_pattern">Do you wnat to set this pattern?</string>
+    <string name="txt_label_draw_pattern">Draw a Pattern</string>
+    <string name="txt_label_set_pattern">Set a new pattern</string>
+
+    <!--Buttons-->
+    <string name="btn_confirm">CONFIRM</string>
+    <string name="btn_cancel">CANCEL</string>
+    <string name="btn_retry">REDRAW</string>
+    <string name="btn_forgot">FORGOT PATTERN?</string>
+
+    <!--Toasts-->
+    <string name="toast_error_pattern_differ">Patterns do not match with each other. Please try
+        again or press RETRY to start from beginning.</string>
+    <string name="toast_error_wrong_pattern">Wrong pattern entered.</string>
+
+</resources>
