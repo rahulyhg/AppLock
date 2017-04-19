@@ -1,7 +1,6 @@
 package anand.android.applockcloneminapi23.utils;
 
 import android.content.Context;
-import android.widget.Toast;
 
 /**
  * Created by anandm on 09/02/17.

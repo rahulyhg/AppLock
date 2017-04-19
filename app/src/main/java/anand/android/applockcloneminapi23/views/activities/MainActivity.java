@@ -108,9 +108,22 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_all_apps) {
             // Handle the camera action
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            AppListFragment fragment = AppListFragment.newInstance(AppConstants.ALL_APPS);
+            ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
+            ft.commit();
+
         } else if (id == R.id.nav_locked_apps) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            AppListFragment fragment = AppListFragment.newInstance(AppConstants.LOCKED);
+            ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
+            ft.commit();
 
         } else if (id == R.id.nav_unlocked_apps) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            AppListFragment fragment = AppListFragment.newInstance(AppConstants.UNLOCKED);
+            ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
+            ft.commit();
 
         } else if (id == R.id.nav_settings) {
 

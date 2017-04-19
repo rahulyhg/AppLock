@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:2:1-40:12
 	package
 		ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:3:5-49
 		INJECTED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml
@@ -22,20 +22,26 @@ ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/Andro
 	android:name
 		ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:6:22-75
 application
-ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:8:5-26:19
-MERGED from [com.android.support:cardview-v7:25.1.0] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:transition:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.bcgdv.asia.lib:connectpattern:0.2] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.bcgdv.asia.lib/connectpattern/0.2/AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:support-compat:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:25:5-20
+ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:8:5-38:19
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/anandm/.android/build-cache/f36e5d2955c291cb9bba57f327865b994c884411/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:design:25.3.1] /Users/anandm/.android/build-cache/fc5b28d71d88d69d0094261f2d449ae48037302f/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] /Users/anandm/.android/build-cache/c713a436660ad84c8185d5f60470ae6e92ce128a/output/AndroidManifest.xml:26:5-20
+MERGED from [com.bcgdv.asia.lib:connectpattern:0.2] /Users/anandm/.android/build-cache/65db90613b592c2a666bbe3cc69b9a93859172bc/output/AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/anandm/.android/build-cache/a6de73fb3b7c15c23f74833373beb5ab6e1e8edb/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/anandm/.android/build-cache/b8cbebdb52b1f5a5a2c0fd046c4bc90e025d09f7/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/anandm/.android/build-cache/e8b4641f6890df8d6269fe8538458737b5db2528/output/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-analytics:10.2.1] /Users/anandm/.android/build-cache/be702919533360bd1fecd4f050b475080a70f2bc/output/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.1] /Users/anandm/.android/build-cache/8b0627877c44f20abffebfb33f1341bb39fd1278/output/AndroidManifest.xml:19:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.1] /Users/anandm/.android/build-cache/14a1b2ee933edb7a1ccaa4951adaf1518221136f/output/AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-base:10.2.1] /Users/anandm/.android/build-cache/66c4b456c8abadfb50d25ea16a1728b9c8af10f6/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:10.2.1] /Users/anandm/.android/build-cache/621060f7285937797074e8659d1d00f2abeec110/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] /Users/anandm/.android/build-cache/d1a370bf3cea42016e0517fcd25ce5097cd682da/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.3.1] /Users/anandm/.android/build-cache/eecd51f744678c59cc49db4e8ea81b58912586d2/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/anandm/.android/build-cache/2e1d620122df44d79f9250f9439d58ae44fc2976/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/anandm/.android/build-cache/e4450092c952f583c63fd393dd01b7c5087c2c08/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/anandm/.android/build-cache/4c13bb7d8c2a2e87b8044194dc27c31cd6e154db/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/anandm/.android/build-cache/258cdca769c7a3018b7768431643d88a3da1e3cc/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/anandm/.android/build-cache/8888b6b6b44578fe3e82dd1164872378f0cd1c32/output/AndroidManifest.xml:29:5-20
 	android:label
 		ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:11:9-41
 	android:supportsRtl
@@ -70,28 +76,100 @@ ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/Andro
 		ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:25:13-56
 	android:name
 		ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:24:19-64
+receiver#anand.android.applockcloneminapi23.service.BootComplete
+ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:27:9-36:20
+	android:exported
+		ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:29:13-36
+	android:name
+		ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:28:13-49
+intent-filter#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:30:13-32:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:31:17-79
+	android:name
+		ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:31:25-76
+intent-filter#android.intent.action.PACKAGE_RESTARTED
+ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:33:13-35:29
+action#android.intent.action.PACKAGE_RESTARTED
+ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml:34:25-79
 uses-sdk
 INJECTED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:cardview-v7:25.1.0] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:recyclerview-v7:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.jakewharton:butterknife:8.0.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.0.1/AndroidManifest.xml:5:5-43
-MERGED from [com.bcgdv.asia.lib:connectpattern:0.2] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.bcgdv.asia.lib/connectpattern/0.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:support-compat:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:cardview-v7:25.3.1] /Users/anandm/.android/build-cache/f36e5d2955c291cb9bba57f327865b994c884411/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:25.3.1] /Users/anandm/.android/build-cache/fc5b28d71d88d69d0094261f2d449ae48037302f/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/anandm/.android/build-cache/663aa535a7a6d80b509a176757f06cab83bd763d/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] /Users/anandm/.android/build-cache/c713a436660ad84c8185d5f60470ae6e92ce128a/output/AndroidManifest.xml:20:5-44
+MERGED from [com.takwolf.android:lock9view:0.0.2] /Users/anandm/.android/build-cache/0c22a2ecb7747b9ade99d9c12252b67bd878d277/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.jakewharton:butterknife:8.0.1] /Users/anandm/.android/build-cache/ef63dde9aeb19adb1733cdf861f40fc809160ae8/output/AndroidManifest.xml:5:5-43
+MERGED from [com.bcgdv.asia.lib:connectpattern:0.2] /Users/anandm/.android/build-cache/65db90613b592c2a666bbe3cc69b9a93859172bc/output/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/anandm/.android/build-cache/a6de73fb3b7c15c23f74833373beb5ab6e1e8edb/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/anandm/.android/build-cache/b8cbebdb52b1f5a5a2c0fd046c4bc90e025d09f7/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/anandm/.android/build-cache/e8b4641f6890df8d6269fe8538458737b5db2528/output/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-analytics:10.2.1] /Users/anandm/.android/build-cache/be702919533360bd1fecd4f050b475080a70f2bc/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:10.2.1] /Users/anandm/.android/build-cache/8b0627877c44f20abffebfb33f1341bb39fd1278/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.1] /Users/anandm/.android/build-cache/14a1b2ee933edb7a1ccaa4951adaf1518221136f/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:10.2.1] /Users/anandm/.android/build-cache/66c4b456c8abadfb50d25ea16a1728b9c8af10f6/output/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:10.2.1] /Users/anandm/.android/build-cache/621060f7285937797074e8659d1d00f2abeec110/output/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:10.2.1] /Users/anandm/.android/build-cache/d1a370bf3cea42016e0517fcd25ce5097cd682da/output/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:support-v4:25.3.1] /Users/anandm/.android/build-cache/eecd51f744678c59cc49db4e8ea81b58912586d2/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/anandm/.android/build-cache/2e1d620122df44d79f9250f9439d58ae44fc2976/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/anandm/.android/build-cache/e4450092c952f583c63fd393dd01b7c5087c2c08/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/anandm/.android/build-cache/4c13bb7d8c2a2e87b8044194dc27c31cd6e154db/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/anandm/.android/build-cache/258cdca769c7a3018b7768431643d88a3da1e3cc/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/anandm/.android/build-cache/8888b6b6b44578fe3e82dd1164872378f0cd1c32/output/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.1.1] /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.3.1] /Users/anandm/.android/build-cache/fc5b28d71d88d69d0094261f2d449ae48037302f/output/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/anandm/AndroidProjects/AppLockCloneMinAPI23/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:cardview-v7:25.3.1] /Users/anandm/.android/build-cache/f36e5d2955c291cb9bba57f327865b994c884411/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:design:25.3.1] /Users/anandm/.android/build-cache/fc5b28d71d88d69d0094261f2d449ae48037302f/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] /Users/anandm/.android/build-cache/663aa535a7a6d80b509a176757f06cab83bd763d/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] /Users/anandm/.android/build-cache/c713a436660ad84c8185d5f60470ae6e92ce128a/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/anandm/.android/build-cache/a6de73fb3b7c15c23f74833373beb5ab6e1e8edb/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/anandm/.android/build-cache/b8cbebdb52b1f5a5a2c0fd046c4bc90e025d09f7/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/anandm/.android/build-cache/e8b4641f6890df8d6269fe8538458737b5db2528/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/anandm/.android/build-cache/eecd51f744678c59cc49db4e8ea81b58912586d2/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/anandm/.android/build-cache/2e1d620122df44d79f9250f9439d58ae44fc2976/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/anandm/.android/build-cache/e4450092c952f583c63fd393dd01b7c5087c2c08/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/anandm/.android/build-cache/4c13bb7d8c2a2e87b8044194dc27c31cd6e154db/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/anandm/.android/build-cache/258cdca769c7a3018b7768431643d88a3da1e3cc/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/anandm/.android/build-cache/8888b6b6b44578fe3e82dd1164872378f0cd1c32/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:cardview-v7:25.3.1] /Users/anandm/.android/build-cache/f36e5d2955c291cb9bba57f327865b994c884411/output/AndroidManifest.xml:24:9-31
+	android:name
+		ADDED from [com.android.support:cardview-v7:25.3.1] /Users/anandm/.android/build-cache/f36e5d2955c291cb9bba57f327865b994c884411/output/AndroidManifest.xml:23:9-47
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.gms:play-services-analytics:10.2.1] /Users/anandm/.android/build-cache/be702919533360bd1fecd4f050b475080a70f2bc/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.1] /Users/anandm/.android/build-cache/14a1b2ee933edb7a1ccaa4951adaf1518221136f/output/AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:10.2.1] /Users/anandm/.android/build-cache/be702919533360bd1fecd4f050b475080a70f2bc/output/AndroidManifest.xml:20:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-analytics:10.2.1] /Users/anandm/.android/build-cache/be702919533360bd1fecd4f050b475080a70f2bc/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.1] /Users/anandm/.android/build-cache/14a1b2ee933edb7a1ccaa4951adaf1518221136f/output/AndroidManifest.xml:21:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:10.2.1] /Users/anandm/.android/build-cache/be702919533360bd1fecd4f050b475080a70f2bc/output/AndroidManifest.xml:21:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-analytics:10.2.1] /Users/anandm/.android/build-cache/be702919533360bd1fecd4f050b475080a70f2bc/output/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:10.2.1] /Users/anandm/.android/build-cache/14a1b2ee933edb7a1ccaa4951adaf1518221136f/output/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:10.2.1] /Users/anandm/.android/build-cache/be702919533360bd1fecd4f050b475080a70f2bc/output/AndroidManifest.xml:24:22-65
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.2.1] /Users/anandm/.android/build-cache/66c4b456c8abadfb50d25ea16a1728b9c8af10f6/output/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.2.1] /Users/anandm/.android/build-cache/66c4b456c8abadfb50d25ea16a1728b9c8af10f6/output/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.2.1] /Users/anandm/.android/build-cache/66c4b456c8abadfb50d25ea16a1728b9c8af10f6/output/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:10.2.1] /Users/anandm/.android/build-cache/66c4b456c8abadfb50d25ea16a1728b9c8af10f6/output/AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:10.2.1] /Users/anandm/.android/build-cache/d1a370bf3cea42016e0517fcd25ce5097cd682da/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:10.2.1] /Users/anandm/.android/build-cache/d1a370bf3cea42016e0517fcd25ce5097cd682da/output/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:10.2.1] /Users/anandm/.android/build-cache/d1a370bf3cea42016e0517fcd25ce5097cd682da/output/AndroidManifest.xml:20:20-65
