@@ -23,10 +23,8 @@ import anand.android.applockcloneminapi23.views.adapters.modle.AppInfo;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-
 /**
  * Created by amitshekhar on 28/04/15.
- *
  */
 
 public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationListAdapter.ViewHolder> {

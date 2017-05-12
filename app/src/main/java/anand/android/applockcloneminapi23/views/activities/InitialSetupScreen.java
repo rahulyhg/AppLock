@@ -23,7 +23,6 @@ import static android.provider.Settings.ACTION_MANAGE_OVERLAY_PERMISSION;
 
 /**
  * Created by anandm on 08/02/17.
- *
  */
 
 public class InitialSetupScreen extends AppCompatActivity {
