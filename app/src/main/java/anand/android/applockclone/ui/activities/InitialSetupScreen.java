@@ -77,8 +77,8 @@ public class InitialSetupScreen extends AppCompatActivity {
 
     //Check if pattern already exists
     private boolean isPatternExists() {
-        return SharedPref.getBooleanFromPref(this, SP_PATTERN_EXISTS) &&
-                null != SharedPref.getStringFromPref(this, AppConstants.SP_PATTERN);
+        return SharedPref.INSTANCE.getBooleanFromPref(this, INSTANCE.getSP_PATTERN_EXISTS()) &&
+                null != SharedPref.INSTANCE.getStringFromPref(this, AppConstants.INSTANCE.getSP_PATTERN());
     }
 
     //Show normal pattern access view ( when pattern exists )

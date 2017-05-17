@@ -29,7 +29,6 @@ import butterknife.OnClick;
 
 /**
  * Created by anandm on 08/02/17.
- *
  */
 
 public class InitialSetupFragment extends Fragment {
@@ -98,7 +97,7 @@ public class InitialSetupFragment extends Fragment {
 
                 //Check if patterns match
                 if (!isPatternMatch()) {
-                    AppToast.showToast(getActivity(), toast_error_pattern_differ);
+                    AppToast.INSTANCE.showToast(getActivity(), toast_error_pattern_differ);
                     return;
                 }
 
@@ -140,20 +139,20 @@ public class InitialSetupFragment extends Fragment {
     }
 
     private boolean isPatternMatch() {
-        return ValidatePass.isTwoArrayListsWithSameValues(newPattern, confirmPattern);
+        return ValidatePass.INSTANCE.isTwoArrayListsWithSameValues(newPattern, confirmPattern);
     }
 
     @OnClick(R.id.btnConfirm)
     public void validatePattern(Button button) {
         if (isPatternMatch()) {
             Log.e(TAG, pass + "");
-            SharedPref.saveStringInPref(getActivity(), AppConstants.SP_PATTERN, pass);
-            SharedPref.saveBooleanInPref(getActivity(), AppConstants.SP_PATTERN_EXISTS, true);
+            SharedPref.INSTANCE.saveStringInPref(getActivity(), AppConstants.INSTANCE.getSP_PATTERN(), pass);
+            SharedPref.INSTANCE.saveBooleanInPref(getActivity(), AppConstants.INSTANCE.getSP_PATTERN_EXISTS(), true);
             context.startActivity(new Intent(getActivity(), MainActivity.class));
             getActivity().finish();
         } else {
             setDrawAgainView();
-            AppToast.showToast(getActivity(), toast_error_pattern_differ);
+            AppToast.INSTANCE.showToast(getActivity(), toast_error_pattern_differ);
         }
     }
 

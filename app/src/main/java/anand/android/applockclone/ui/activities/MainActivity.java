@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        AppListFragment fragment = AppListFragment.newInstance(AppConstants.ALL_APPS);
+        AppListFragment fragment = AppListFragment.newInstance(AppConstants.INSTANCE.getALL_APPS());
         ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
         ft.commit();
     }
@@ -109,19 +109,19 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_all_apps) {
             // Handle the camera action
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            AppListFragment fragment = AppListFragment.newInstance(AppConstants.ALL_APPS);
+            AppListFragment fragment = AppListFragment.newInstance(AppConstants.INSTANCE.getALL_APPS());
             ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
             ft.commit();
 
         } else if (id == R.id.nav_locked_apps) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            AppListFragment fragment = AppListFragment.newInstance(AppConstants.LOCKED);
+            AppListFragment fragment = AppListFragment.newInstance(AppConstants.INSTANCE.getLOCKED());
             ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
             ft.commit();
 
         } else if (id == R.id.nav_unlocked_apps) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            AppListFragment fragment = AppListFragment.newInstance(AppConstants.UNLOCKED);
+            AppListFragment fragment = AppListFragment.newInstance(AppConstants.INSTANCE.getUNLOCKED());
             ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
             ft.commit();
 

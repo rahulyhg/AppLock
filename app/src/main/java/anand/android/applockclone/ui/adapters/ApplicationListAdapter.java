@@ -80,12 +80,12 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
         List<AppInfo> lockedFilteredAppList = new ArrayList<AppInfo>();
         List<AppInfo> unlockedFilteredAppList = new ArrayList<AppInfo>();
         boolean flag = true;
-        if (lockStatus.matches(AppConstants.LOCKED) || lockStatus.matches(AppConstants.UNLOCKED)) {
+        if (lockStatus.matches(AppConstants.INSTANCE.getLOCKED()) || lockStatus.matches(AppConstants.INSTANCE.getUNLOCKED())) {
             for (int i = 0; i < installedAppList.size(); i++) {
                 flag = true;
-                if (SharedPref.getLocked(context) != null) {
-                    for (int j = 0; j < SharedPref.getLocked(context).size(); j++) {
-                        if (installedAppList.get(i).getPackageName().matches(SharedPref
+                if (SharedPref.INSTANCE.getLocked(context) != null) {
+                    for (int j = 0; j < SharedPref.INSTANCE.getLocked(context).size(); j++) {
+                        if (installedAppList.get(i).getPackageName().matches(SharedPref.INSTANCE
                                 .getLocked(context).get(j))) {
                             lockedFilteredAppList.add(installedAppList.get(i));
                             flag = false;
@@ -96,10 +96,10 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
                     unlockedFilteredAppList.add(installedAppList.get(i));
                 }
             }
-            if (lockStatus.matches(AppConstants.LOCKED)) {
+            if (lockStatus.matches(AppConstants.INSTANCE.getLOCKED())) {
                 installedAppList.clear();
                 installedAppList.addAll(lockedFilteredAppList);
-            } else if (lockStatus.matches(AppConstants.UNLOCKED)) {
+            } else if (lockStatus.matches(AppConstants.INSTANCE.getUNLOCKED())) {
                 installedAppList.clear();
                 installedAppList.addAll(unlockedFilteredAppList);
             }
@@ -135,9 +135,9 @@ public class ApplicationListAdapter extends RecyclerView.Adapter<ApplicationList
                 Log.e(TAG, "is " + appInfo1.getPackageName());
                 if (isChecked) {
                     lockedAppList.add(appInfo1);
-                    SharedPref.addLocked(context, appInfo1.getPackageName());
+                    SharedPref.INSTANCE.addLocked(context, appInfo1.getPackageName());
                 } else {
-                    SharedPref.removeLocked(context, appInfo1.getPackageName());
+                    SharedPref.INSTANCE.removeLocked(context, appInfo1.getPackageName());
                 }
             }
         });

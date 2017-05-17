@@ -27,7 +27,6 @@ import butterknife.ButterKnife;
 
 /**
  * Created by anandm on 09/02/17.
- *
  */
 
 public class AccessPatternViewFragment extends Fragment {
@@ -69,7 +68,7 @@ public class AccessPatternViewFragment extends Fragment {
         _connectPattern.setOnConnectPatternListener(new ConnectPatternView.OnConnectPatternListener() {
             @Override
             public void onPatternEntered(ArrayList<Integer> result) {
-                savedPattern = SharedPref.getStringFromPref(getActivity(), AppConstants.SP_PATTERN);
+                savedPattern = SharedPref.INSTANCE.getStringFromPref(getActivity(), AppConstants.INSTANCE.getSP_PATTERN());
 
                 for (int i = 0;  i < result.size(); i++) {
                     enteredPattern = enteredPattern +result.get(i);
@@ -81,7 +80,7 @@ public class AccessPatternViewFragment extends Fragment {
                     getActivity().finish();
                 } else {
                     enteredPattern = "";
-                    AppToast.showToast(getActivity(), toast_error_wrong_pattern);
+                    AppToast.INSTANCE.showToast(getActivity(), toast_error_wrong_pattern);
                 }
             }
 
