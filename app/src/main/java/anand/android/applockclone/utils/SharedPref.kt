@@ -9,6 +9,7 @@ import java.util.ArrayList
 import java.util.Arrays
 
 import android.content.Context.MODE_PRIVATE
+import javax.inject.Inject
 
 /**
  * Created by anandm on 08/02/17.
@@ -16,7 +17,13 @@ import android.content.Context.MODE_PRIVATE
 
 object SharedPref {
 
-    private val sharedPreferences: SharedPreferences? = null
+    var sharedPref: SharedPreferences? = null;
+
+    @Inject
+    public fun SharedPref(sharedPreferences: SharedPreferences) {
+        this.sharedPref = sharedPref;
+    }
+
     private var editor: SharedPreferences.Editor? = null
 
     //Get app shared pref instance in private mode
@@ -50,7 +57,7 @@ object SharedPref {
      * *
      * @return
      */
-    fun getStringFromPref(context: Context, key: String): String = getSharedPref(context).getString(key, null)
+    fun getStringFromPref(context: Context, key: String): String = sharedPref!!.getString(key, null)
 
 
     /**

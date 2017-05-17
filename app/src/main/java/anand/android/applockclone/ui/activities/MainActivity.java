@@ -28,6 +28,7 @@ import anand.android.applockclone.R;
 import anand.android.applockclone.utils.AppConstants;
 import anand.android.applockclone.ui.adapters.modle.AppInfo;
 import anand.android.applockclone.ui.fragments.AppListFragment;
+import anand.android.applockclone.utils.AppToast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

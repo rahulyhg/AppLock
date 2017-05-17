@@ -18,7 +18,6 @@ import anand.android.applockclone.ui.fragments.AccessPatternViewFragment;
 import anand.android.applockclone.ui.fragments.InitialSetupFragment;
 import butterknife.ButterKnife;
 
-import static anand.android.applockclone.utils.AppConstants.SP_PATTERN_EXISTS;
 import static android.provider.Settings.ACTION_MANAGE_OVERLAY_PERMISSION;
 
 /**
@@ -77,7 +76,7 @@ public class InitialSetupScreen extends AppCompatActivity {
 
     //Check if pattern already exists
     private boolean isPatternExists() {
-        return SharedPref.INSTANCE.getBooleanFromPref(this, INSTANCE.getSP_PATTERN_EXISTS()) &&
+        return SharedPref.INSTANCE.getBooleanFromPref(this, AppConstants.INSTANCE.getSP_PATTERN_EXISTS()) &&
                 null != SharedPref.INSTANCE.getStringFromPref(this, AppConstants.INSTANCE.getSP_PATTERN());
     }
 
