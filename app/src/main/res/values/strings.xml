@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppLockCloneMinAPI23</string>
+    <string name="app_name">AppLockClone</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -12,7 +12,7 @@
 
     <!--Text view-->
     <string name="txt_label_pattern_once_again">Confirm pattern once again</string>
-    <string name="txt_label_confirm_pattern">Do you wnat to set this pattern?</string>
+    <string name="txt_label_confirm_pattern">Do you want to set this pattern?</string>
     <string name="txt_label_draw_pattern">Draw a Pattern</string>
     <string name="txt_label_set_pattern">Set a new pattern</string>
 
