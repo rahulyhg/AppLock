@@ -17,11 +17,11 @@ import com.bcgdv.asia.lib.connectpattern.ConnectPatternView;
 import java.util.ArrayList;
 
 import anand.android.applockclone.R;
-import anand.android.applockclone.utils.AppConstants;
-import anand.android.applockclone.utils.SharedPref;
 import anand.android.applockclone.utils.AppToast;
-import anand.android.applockclone.utils.ValidatePass;
+import anand.android.applockclone.utils.Constants;
+import anand.android.applockclone.utils.SharedPref;
 import anand.android.applockclone.ui.activities.MainActivity;
+import anand.android.applockclone.utils.ValidatePassword;
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,7 +39,8 @@ public class InitialSetupFragment extends Fragment {
     private ArrayList<Integer> confirmPattern = new ArrayList<>();
     private Boolean validatePattern = false;
     private int entryCount = 0;
-    String pass = "";
+    private String pass = "";
+    private SharedPref sharedPref = new SharedPref();
 
     @BindView(R.id.connectPattern) ConnectPatternView _connectPattern;
     @BindView(R.id.txtPatternLabel) TextView _txtPatternLabel;
@@ -97,7 +98,7 @@ public class InitialSetupFragment extends Fragment {
 
                 //Check if patterns match
                 if (!isPatternMatch()) {
-                    AppToast.INSTANCE.showToast(getActivity(), toast_error_pattern_differ);
+                    AppToast.showToast(getActivity(), toast_error_pattern_differ);
                     return;
                 }
 
@@ -139,20 +140,20 @@ public class InitialSetupFragment extends Fragment {
     }
 
     private boolean isPatternMatch() {
-        return ValidatePass.INSTANCE.isTwoArrayListsWithSameValues(newPattern, confirmPattern);
+        return ValidatePassword.isTwoArrayListsWithSameValues(newPattern, confirmPattern);
     }
 
     @OnClick(R.id.btnConfirm)
     public void validatePattern(Button button) {
         if (isPatternMatch()) {
             Log.e(TAG, pass + "");
-            SharedPref.INSTANCE.saveStringInPref(getActivity(), AppConstants.INSTANCE.getSP_PATTERN(), pass);
-            SharedPref.INSTANCE.saveBooleanInPref(getActivity(), AppConstants.INSTANCE.getSP_PATTERN_EXISTS(), true);
+            sharedPref.saveStringInPref(getActivity(), Constants.SP_PATTERN, pass);
+            sharedPref.saveBooleanInPref(getActivity(), Constants.SP_PATTERN_EXISTS, true);
             context.startActivity(new Intent(getActivity(), MainActivity.class));
             getActivity().finish();
         } else {
             setDrawAgainView();
-            AppToast.INSTANCE.showToast(getActivity(), toast_error_pattern_differ);
+            AppToast.showToast(getActivity(), toast_error_pattern_differ);
         }
     }
 

@@ -12,21 +12,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import anand.android.applockclone.R;
-import anand.android.applockclone.utils.AppConstants;
-import anand.android.applockclone.utils.SharedPref;
 import anand.android.applockclone.ui.fragments.AccessPatternViewFragment;
 import anand.android.applockclone.ui.fragments.InitialSetupFragment;
+import anand.android.applockclone.utils.Constants;
+import anand.android.applockclone.utils.SharedPref;
 import butterknife.ButterKnife;
 
 import static android.provider.Settings.ACTION_MANAGE_OVERLAY_PERMISSION;
 
-/**
- * Created by anandm on 08/02/17.
- */
-
 public class InitialSetupScreen extends AppCompatActivity {
 
     public static final String TAG = InitialSetupScreen.class.getSimpleName();
+    private SharedPref sharedPref = new SharedPref();
 
     //Overlay permission request code
     public final static int REQUEST_CODE = 999;
@@ -76,8 +73,8 @@ public class InitialSetupScreen extends AppCompatActivity {
 
     //Check if pattern already exists
     private boolean isPatternExists() {
-        return SharedPref.INSTANCE.getBooleanFromPref(this, AppConstants.INSTANCE.getSP_PATTERN_EXISTS()) &&
-                null != SharedPref.INSTANCE.getStringFromPref(this, AppConstants.INSTANCE.getSP_PATTERN());
+        return sharedPref.getBooleanFromPref(this, Constants.SP_PATTERN_EXISTS) &&
+                null != sharedPref.getStringFromPref(this, Constants.SP_PATTERN);
     }
 
     //Show normal pattern access view ( when pattern exists )

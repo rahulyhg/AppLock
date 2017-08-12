@@ -17,17 +17,13 @@ import com.bcgdv.asia.lib.connectpattern.ConnectPatternView;
 import java.util.ArrayList;
 
 import anand.android.applockclone.R;
-import anand.android.applockclone.utils.AppConstants;
-import anand.android.applockclone.utils.AppToast;
-import anand.android.applockclone.utils.SharedPref;
 import anand.android.applockclone.ui.activities.MainActivity;
+import anand.android.applockclone.utils.AppToast;
+import anand.android.applockclone.utils.Constants;
+import anand.android.applockclone.utils.SharedPref;
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-/**
- * Created by anandm on 09/02/17.
- */
 
 public class AccessPatternViewFragment extends Fragment {
 
@@ -35,6 +31,7 @@ public class AccessPatternViewFragment extends Fragment {
     private Context context;
     private String enteredPattern = "";
     private String savedPattern;
+    private SharedPref sharedPref = new SharedPref();
 
     @BindView(R.id.connectPattern) ConnectPatternView _connectPattern;
     @BindView(R.id.txtPatternLabel) TextView _txtPatternLabel;
@@ -68,7 +65,7 @@ public class AccessPatternViewFragment extends Fragment {
         _connectPattern.setOnConnectPatternListener(new ConnectPatternView.OnConnectPatternListener() {
             @Override
             public void onPatternEntered(ArrayList<Integer> result) {
-                savedPattern = SharedPref.INSTANCE.getStringFromPref(getActivity(), AppConstants.INSTANCE.getSP_PATTERN());
+                savedPattern = sharedPref.getStringFromPref(getActivity(), Constants.SP_PATTERN);
 
                 for (int i = 0;  i < result.size(); i++) {
                     enteredPattern = enteredPattern +result.get(i);
@@ -80,7 +77,7 @@ public class AccessPatternViewFragment extends Fragment {
                     getActivity().finish();
                 } else {
                     enteredPattern = "";
-                    AppToast.INSTANCE.showToast(getActivity(), toast_error_wrong_pattern);
+                    AppToast.showToast(getActivity(), toast_error_wrong_pattern);
                 }
             }
 

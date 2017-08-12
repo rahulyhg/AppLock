@@ -13,10 +13,6 @@ import anand.android.applockclone.R;
 import anand.android.applockclone.ui.activities.MainActivity;
 import anand.android.applockclone.ui.adapters.ApplicationListAdapter;
 
-/**
- * Created by anandm on 09/02/17.
- */
-
 public class AppListFragment extends Fragment {
 
     private RecyclerView mRecyclerView;

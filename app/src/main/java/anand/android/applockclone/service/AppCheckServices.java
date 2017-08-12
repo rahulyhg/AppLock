@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-/**
- * Created by amitshekhar on 28/04/15.
- */
 public class AppCheckServices extends Service {
     @Nullable
     @Override
@@ -116,7 +113,7 @@ public class AppCheckServices extends Service {
 //                    Log.e("AppLock", "Pattern true");
 //                    AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_CHECK_SCREEN, "Correct Password", "correct_password", "");
 //                } else {
-//                    Toast.makeText(getApplicationContext(), "Wrong Pattern Try Again", Toast.LENGTH_SHORT).show();
+//                    AppToast.makeText(getApplicationContext(), "Wrong Pattern Try Again", AppToast.LENGTH_SHORT).show();
 //                    AppLockLogEvents.logEvents(AppLockConstants.PASSWORD_CHECK_SCREEN, "Wrong Password", "wrong_password", "");
 //                }
 //            }

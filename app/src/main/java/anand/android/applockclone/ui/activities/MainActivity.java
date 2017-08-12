@@ -25,10 +25,9 @@ import java.util.Comparator;
 import java.util.List;
 
 import anand.android.applockclone.R;
-import anand.android.applockclone.utils.AppConstants;
 import anand.android.applockclone.ui.adapters.modle.AppInfo;
 import anand.android.applockclone.ui.fragments.AppListFragment;
-import anand.android.applockclone.utils.AppToast;
+import anand.android.applockclone.utils.Constants;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        AppListFragment fragment = AppListFragment.newInstance(AppConstants.INSTANCE.getALL_APPS());
+        AppListFragment fragment = AppListFragment.newInstance(Constants.ALL_APPS);
         ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
         ft.commit();
     }
@@ -110,19 +109,19 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_all_apps) {
             // Handle the camera action
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            AppListFragment fragment = AppListFragment.newInstance(AppConstants.INSTANCE.getALL_APPS());
+            AppListFragment fragment = AppListFragment.newInstance(Constants.ALL_APPS);
             ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
             ft.commit();
 
         } else if (id == R.id.nav_locked_apps) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            AppListFragment fragment = AppListFragment.newInstance(AppConstants.INSTANCE.getLOCKED());
+            AppListFragment fragment = AppListFragment.newInstance(Constants.LOCKED);
             ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
             ft.commit();
 
         } else if (id == R.id.nav_unlocked_apps) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            AppListFragment fragment = AppListFragment.newInstance(AppConstants.INSTANCE.getUNLOCKED());
+            AppListFragment fragment = AppListFragment.newInstance(Constants.UNLOCKED);
             ft.replace(R.id.content_main, fragment, AppListFragment.class.getSimpleName());
             ft.commit();
 

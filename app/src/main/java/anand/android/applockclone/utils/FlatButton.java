@@ -18,10 +18,6 @@ import android.widget.Button;
 import anand.android.applockclone.R;
 
 
-/**
- * Created by amitshekhar on 02/05/15.
- */
-
 public class FlatButton extends Button implements View.OnTouchListener {
 
     //Custom values
