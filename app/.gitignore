@@ -9,6 +9,7 @@ app/build/
 build/generated
 build/intermediates
 .idea/
+build/
 
 # Local configuration file (sdk path, etc)
 local.properties

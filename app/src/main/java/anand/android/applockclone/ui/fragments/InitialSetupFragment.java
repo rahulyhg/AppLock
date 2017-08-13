@@ -27,9 +27,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * Created by anandm on 08/02/17.
- */
 
 public class InitialSetupFragment extends Fragment {
 
